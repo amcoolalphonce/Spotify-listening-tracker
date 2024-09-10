@@ -1,0 +1,15 @@
+# virtual environment folder
+venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# database files
+*.sqlite3
+
+.env
+
+# IDE-specific files
+.vscode/
+.idea/
