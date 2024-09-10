@@ -13,3 +13,7 @@ __pycache__/
 # IDE-specific files
 .vscode/
 .idea/
+
+# 
+spotify/settings.py
+spotify/__init__.py
