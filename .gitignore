@@ -15,5 +15,9 @@ __pycache__/
 .idea/
 
 # 
-spotify/settings.py
 spotify/__init__.py
+spotify/__pycache__
+
+migrations
+analysis/__init__.py
+analysis/__pycache__
