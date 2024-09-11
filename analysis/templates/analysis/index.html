@@ -1,0 +1,242 @@
+<style>
+/* General Styles */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-background {
+  background-color: #f0f0f0; /* Replace with the actual background color */
+}
+
+.text-foreground {
+  color: #333; /* Replace with actual foreground color */
+}
+
+.text-muted-foreground {
+  color: #999; /* Muted color */
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-4xl {
+  max-width: 64rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+/* Section Styles */
+.bg-card {
+  background-color: #ffffff; /* Replace with the actual card background color */
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.bg-secondary {
+  background-color: #e0e0e0; /* Replace with secondary color */
+}
+
+.text-secondary-foreground {
+  color: #222; /* Replace with secondary foreground color */
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+/* Flex Styles */
+.justify-center {
+  justify-content: center;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+/* Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* Footer Styles */
+.text-muted-foreground {
+  color: #6b7280; /* Replace with your muted color */
+}
+
+.py-4 {
+  padding: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+</style>
+
+<div class="min-h-screen bg-background text-foreground flex flex-col items-center p-4">
+    <header class="w-full max-w-4xl text-center py-8">
+      <h1 class="text-4xl font-bold mb-2">Spotify Listening Activity</h1>
+      <p class="text-muted-foreground">Track your music habits and discover your favorite tunes!</p>
+    </header>
+  
+    <main class="w-full max-w-4xl flex flex-col items-center space-y-8">
+      <section class="w-full bg-card p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-4">Your Listening Stats</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-secondary p-4 rounded-lg text-secondary-foreground">
+            <h3 class="text-xl font-bold">Total Minutes</h3>
+            <p class="text-3xl">1,234</p>
+          </div>
+          <div class="bg-secondary p-4 rounded-lg text-secondary-foreground">
+            <h3 class="text-xl font-bold">Top Genre</h3>
+            <p class="text-3xl">Pop</p>
+          </div>
+          <div class="bg-secondary p-4 rounded-lg text-secondary-foreground">
+            <h3 class="text-xl font-bold">Top Artist</h3>
+            <p class="text-3xl">Taylor Swift</p>
+          </div>
+          <div class="bg-secondary p-4 rounded-lg text-secondary-foreground">
+            <h3 class="text-xl font-bold">Top Song</h3>
+            <p class="text-3xl">Shake It Off</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="w-full bg-card p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-4">Listening Trends</h2>
+        <div class="flex justify-center">
+          <img alt="line-graph" src="https://placehold.co/600x300?text=Line+Graph" class="rounded-lg shadow" />
+        </div>
+      </section>
+  
+      <section class="w-full bg-card p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-4">Top Tracks</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex items-center space-x-4">
+            <img alt="album-cover" src="https://placehold.co/100x100" class="rounded-lg" />
+            <div>
+              <h3 class="text-xl font-bold">Song Title</h3>
+              <p class="text-muted-foreground">Artist Name</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <img alt="album-cover" src="https://placehold.co/100x100" class="rounded-lg" />
+            <div>
+              <h3 class="text-xl font-bold">Song Title</h3>
+              <p class="text-muted-foreground">Artist Name</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <img alt="album-cover" src="https://placehold.co/100x100" class="rounded-lg" />
+            <div>
+              <h3 class="text-xl font-bold">Song Title</h3>
+              <p class="text-muted-foreground">Artist Name</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <img alt="album-cover" src="https://placehold.co/100x100" class="rounded-lg" />
+            <div>
+              <h3 class="text-xl font-bold">Song Title</h3>
+              <p class="text-muted-foreground">Artist Name</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer class="w-full max-w-4xl text-center py-4 mt-8">
+      <p class="text-muted-foreground">&copy; 2024 Spotify Listening Activity. All rights reserved.</p>
+    </footer>
+  </div>
