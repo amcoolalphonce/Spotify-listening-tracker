@@ -21,3 +21,5 @@ spotify/__pycache__
 migrations
 analysis/__init__.py
 analysis/__pycache__
+
+notes

@@ -1,0 +1,4 @@
+1. pip install requests requests-oathlib
+spotify uses  OAuth 2.0 to authenticate users so i need two views
+* one to start the authentication process
+* and the other to handle the callback afte rthe users log in
