@@ -1,4 +1,14 @@
-1. pip install requests requests-oathlib
+1. pip install -I oauthlib==2.1.0
+pip install -I requests-oauthlib==1.1.0
+
+2.
+A redirect URI (Uniform Resource Identifier) is a URL that
+an application provides to an external service
+(like Google, Facebook, or any OAuth-based service) 
+as a destination for redirection after an authentication or authorization 
+process is complete.
+-Provide security and control flow
+
 spotify uses  OAuth 2.0 to authenticate users so i need two views
 * one to start the authentication process
 * and the other to handle the callback afte rthe users log in
