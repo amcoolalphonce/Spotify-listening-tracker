@@ -1,0 +1,11 @@
+<h1>Your Recently Played Tracks</h1>
+
+<ul>
+  {% for track in recent_tracks %}
+    <li>
+      {{ track.track.name }} by {{ track.track.artists.0.name }}
+    </li>
+  {% empty %}
+    <li>No recently played tracks found.</li>
+  {% endfor %}
+</ul>
