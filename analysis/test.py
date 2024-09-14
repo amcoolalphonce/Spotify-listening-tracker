@@ -9,3 +9,6 @@ response = requests.post('https://accounts.spotify.com/api/token', data =
                           'client_id' : settings.CLIENT_ID,
                           'client_secret' : settings.CLIENT_SECRET
                           })
+
+
+# not working 
