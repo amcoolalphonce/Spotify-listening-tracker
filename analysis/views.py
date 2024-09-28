@@ -43,15 +43,30 @@ def spotify_callback(request):
         'Content-Type': 'application/x-www-form-urlencoded'
     }
     
-    response = requests.post(token_url, data = payload)
-    token_data = response.json()
-    
-    access_token = token_data.get('access_token')
-    
-    request.session['spotify_token'] = access_token # save token to session
-    
-    return redirect('spotify_profile')
-
+    try :
+        response = requests.post(token_url, data=payload, headers=headers)
+        
+        if response.status_code != 200:
+            return JsonResponse({
+                'error': 'Failed to retrieve access token',
+                'response_data': response.json()
+            }, status=response.status_code)
+            
+        token_data = response.json()
+        access_token = token_data.get('access_token')
+        
+        if not access_token:
+            return JsonResponse({
+                'error': 'Access token not found in response',
+                'response_data': token_data
+            }, status=400)
+            
+        request.session['spotify_token'] = access_token
+        return redirect('spotify_profile')
+    except requests.ConnectionError:
+        return JsonResponse({'error': 'Connection error while contacting Spotify API'}, status=502)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
 
 def spotify_profile(request):
     access_token = request.session.get('spotify_token')
