@@ -1,6 +1,7 @@
 import requests
 from django.conf import settings
 from django.shortcuts import redirect, render
+from django.http import JsonResponse
 
 def index(request):
     return render(request, 'analysis/index.html')
@@ -25,6 +26,9 @@ def spotify_login(request):
 def spotify_callback(request):
     code = request.GET.get('code')
     
+    if not code:
+        return JsonResponse({'error' : 'Authorization code not prrovided'}, status = 400)
+    
     token_url = "https://accounts.spotify/api/token"
     
     payload ={
@@ -33,6 +37,10 @@ def spotify_callback(request):
         "redirect_uri" : settings.SPOTIFY_REDIRECT_URI,
         "client_id" : settings.CLIENT_ID,
         "client_secret" : settings.CLIENT_SECRET
+    }
+    
+    headers = {
+        'Content-Type': 'application/x-www-form-urlencoded'
     }
     
     response = requests.post(token_url, data = payload)
